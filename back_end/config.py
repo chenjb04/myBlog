@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-'''
+"""
  * @Author: chenjb
  * @Date: 2019-10-22 14:20:20
  * @Last Modified by:   chenjb
  * @Last Modified time: 2019-10-22 14:20:20
  * @Desc: 项目配置信息
-'''
+"""
 import os
 from configparser import ConfigParser
 

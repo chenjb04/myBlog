@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-'''
+"""
  * @Author: chenjb
  * @Date: 2019-10-22 16:31:06
  * @Last Modified by:   chenjb
  * @Last Modified time: 2019-10-22 16:31:06
  * @Desc: 工厂方法创建app
-'''
+"""
 from flask import Flask
 from config import config
 
