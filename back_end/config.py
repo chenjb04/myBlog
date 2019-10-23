@@ -11,6 +11,7 @@ import os
 from configparser import ConfigParser
 
 import redis
+import logging
 
 
 def load_config(path):
@@ -57,6 +58,8 @@ class Config(object):
     PERMANENT_SESSION_LIFETIME = 86400  # session 的有效期，单位是秒
     SESSION_REDIS = redis.StrictRedis(
         host=REDIS_HOST, port=REDIS_PORT, password=REDIS_PASSWORD)
+    # 设置日志等级
+    LOG_LEVEL = logging.DEBUG
 
 
 class DevelopmentConfig(Config):

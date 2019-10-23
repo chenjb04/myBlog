@@ -10,9 +10,13 @@
 from flask import Flask
 from config import config
 
+from utils.log import setup_log
+
 
 def create_app(config_name):
     """工厂方法创建app"""
+    # 设置日志
+    setup_log(config[config_name])
     app = Flask(__name__)
     # 加载配置
     app.config.from_object(config[config_name])
