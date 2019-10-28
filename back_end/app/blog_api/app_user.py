@@ -14,7 +14,8 @@ def get_image_code():
     获取图片验证码
     :return:
     """
-    image_code_id = request.json.get('image_code_id', None)
+    image_code_id = request.args.get('image_code_id', None)
+    print(image_code_id)
     if not image_code_id:
         return abort(403)
     name, text, image = captcha.generate_captcha()
@@ -24,7 +25,7 @@ def get_image_code():
         current_app.logger.debug(e)
         return jsonify({'status': 'fail', 'msg': '存储验证码失败', 'error': str(e)})
     response = make_response(image)
-    response.headers['Content-Typr'] = 'image/jpg'
+    response.headers['Content-Type'] = 'image/jpg'
     return response
 
 
