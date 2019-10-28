@@ -1,7 +1,7 @@
 import { RootStateTypes } from './types'
 const state: RootStateTypes = {
   validcode: {
-    'images': 'hahahh'
+    'images': ''
   },
 }
 

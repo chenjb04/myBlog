@@ -1,21 +1,19 @@
 <template>
   <div id="login">
-    <el-form class="login-form" :model="form" ref="form" :rules='rules' status-icon>
+    <el-form class="login-form" :model="form" ref="form" :rules="rules" status-icon>
       <el-form-item prop="username">
-        <el-input
-          placeholder="用户名/手机号/邮箱"
-          v-model="form.username"
-          prefix-icon='el-icon-user'
-        >
-        </el-input>
+        <el-input placeholder="用户名/手机号/邮箱" v-model="form.username" prefix-icon="el-icon-user"></el-input>
       </el-form-item>
       <el-form-item prop="password">
-        <el-input type="password" placeholder="密码" v-model="form.password"
-        prefix-icon='el-icon-lock'>
-        </el-input>
+        <el-input
+          type="password"
+          placeholder="密码"
+          v-model="form.password"
+          prefix-icon="el-icon-lock"
+        ></el-input>
       </el-form-item>
       <el-form-item prop="validcode">
-        <el-input placeholder="验证码" v-model="form.validcode" prefix-icon='el-icon-key'>
+        <el-input placeholder="验证码" v-model="form.validcode" prefix-icon="el-icon-key">
           <!-- <img src="validcode.image" class="valicode" @click="changeValicode" /> -->
         </el-input>
       </el-form-item>
@@ -34,32 +32,34 @@
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { State, Action, namespace, Getter } from 'vuex-class'
-let loginStore = namespace('login')
+import { State, Action, namespace, Getter } from "vuex-class";
+let loginStore = namespace("login");
 @Component
 export default class Login extends Vue {
-  @loginStore.State(state => state.validcode) validcode: any
+  @loginStore.State(state => state.validcode) validcode: any;
+  @loginStore.Action("GET_VALIDCODE") GET_VALIDCODE: any;
   form: any = {
     username: "",
     password: "",
     validcode: ""
   };
 
-    rules: object = {
-      username: {
-        message: "请输入用户名/手机号/邮箱",
-        trigger: "blur",
-        required: true
-      },
-      password: { message: "请输入密码", trigger: "blur", required: true },
-      validcode: {
-        validator: this.checkValicode,
-        trigger: "blur",
-        required: true
-      }
-    };
+  rules: object = {
+    username: {
+      message: "请输入用户名/手机号/邮箱",
+      trigger: "blur",
+      required: true
+    },
+    password: { message: "请输入密码", trigger: "blur", required: true },
+    validcode: {
+      validator: this.checkValicode,
+      trigger: "blur",
+      required: true
+    }
+  };
   mounted() {
-      console.log(this.validcode.images)
+    console.log(this.validcode.images);
+    this.GET_VALIDCODE();
   }
   checkValicode(rule: any, value: string, callback: any) {
     if (value === "") {
@@ -82,6 +82,20 @@ export default class Login extends Vue {
         return false;
       }
     });
+  }
+  generateUUID() {
+    let d = new Date().getTime();
+    if (window.performance && typeof window.performance.now === "function") {
+      d += performance.now(); //use high-precision timer if available
+    }
+    let uuid = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(
+      c
+    ) {
+      var r = (d + Math.random() * 16) % 16 | 0;
+      d = Math.floor(d / 16);
+      return (c == "x" ? r : (r & 0x3) | 0x8).toString(16);
+    });
+    return uuid;
   }
 }
 </script>
