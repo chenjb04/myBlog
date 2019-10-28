@@ -1,8 +1,18 @@
 <template>
   <div id="login">
-    <el-form class="login-form" :model="form" ref="form" :rules="rules" status-icon>
+    <el-form
+      class="login-form"
+      :model="form"
+      ref="form"
+      :rules="rules"
+      status-icon
+    >
       <el-form-item prop="username">
-        <el-input placeholder="用户名/手机号/邮箱" v-model="form.username" prefix-icon="el-icon-user"></el-input>
+        <el-input
+          placeholder="用户名/手机号/邮箱"
+          v-model="form.username"
+          prefix-icon="el-icon-user"
+        ></el-input>
       </el-form-item>
       <el-form-item prop="password">
         <el-input
@@ -13,19 +23,25 @@
         ></el-input>
       </el-form-item>
       <el-form-item prop="validcode">
-        <el-input placeholder="验证码" v-model="form.validcode" prefix-icon="el-icon-key">
-          <!-- <img src="validcode.image" class="valicode" @click="changeValicode" /> -->
+        <el-input
+          placeholder="验证码"
+          v-model="form.validcode"
+          prefix-icon="el-icon-key"
+        >
         </el-input>
       </el-form-item>
       <el-form-item>
         <el-checkbox>记住我</el-checkbox>
-        <el class="login-form-forgot" href>忘记密码？</el>
+        <a class="login-form-forgot">忘记密码？</a>
         <el-button
           type="primary"
           html-type="submit"
           class="login-form-button"
           @click="submitForm('form')"
-        >登录</el-button>
+        >
+          登录
+        </el-button>
+        <el-form-item><img :src="validcode.images" class="valicode" /></el-form-item>
       </el-form-item>
     </el-form>
   </div>
@@ -43,7 +59,7 @@ export default class Login extends Vue {
     password: "",
     validcode: ""
   };
-
+  imageCodeId:string = ''
   rules: object = {
     username: {
       message: "请输入用户名/手机号/邮箱",
@@ -58,8 +74,8 @@ export default class Login extends Vue {
     }
   };
   mounted() {
-    console.log(this.validcode.images);
-    this.GET_VALIDCODE();
+    this.imageCodeId = this.generateUUID();
+    this.GET_VALIDCODE({'image_code_id':this.imageCodeId});
   }
   checkValicode(rule: any, value: string, callback: any) {
     if (value === "") {
