@@ -3,7 +3,7 @@ import { Message } from 'element-ui'
 import { stringify } from 'qs'
 
 let swicthTimeOut: boolean = false
-const httpConfig:any = {
+const httpConfig: any = {
   headers: {
     'Content-Type': 'application/x-www-form-urlencoded',
     'Access-Control-Allow-Origin': '*',
@@ -14,7 +14,7 @@ const httpConfig:any = {
   }
 }
 
-const $http = (url:string, option:object = {}, header:object = {}) => {
+const $http = (url: string, option: object = {}, header: object = {}) => {
   return axios
     .request({ url, headers: { ...httpConfig.headers, ...header }, ...option })
     .then(resp => {
@@ -53,27 +53,30 @@ const $http = (url:string, option:object = {}, header:object = {}) => {
     })
 }
 
-const httpMiddleware:any = {
-  get: (url:string, param:object = {}) =>
+const httpMiddleware: any = {
+  get: (url: string, param: object = {}) =>
     $http(`${url}?${stringify({ ...param, _k: new Date().getTime() })}`, {
       method: 'GET'
     }),
-  post: (url:string, param = {}) =>
+  post: (url: string, param = {}) =>
     $http(url, {
       method: 'POST',
       data: stringify({ ...param, _k: new Date().getTime() })
     }),
-  put: (url:string, param = {}) =>
+  put: (url: string, param = {}) =>
     $http(url, {
       method: 'PUT',
       data: stringify({ ...param, _k: new Date().getTime() })
     }),
-  delete: (url:string, param = {}) =>
+  delete: (url: string, param = {}) =>
     $http(`${url}?${stringify({ ...param, _k: new Date().getTime() })}`, {
       method: 'DELETE'
     }),
-  option: (url:string, param = {}, header = { 'Content-Type': 'application/json' }) =>
-    $http(url, { method: 'POST', data: param }, header)
+  option: (
+    url: string,
+    param = {},
+    header = { 'Content-Type': 'application/json' }
+  ) => $http(url, { method: 'POST', data: param }, header)
 }
 
 export default httpMiddleware

@@ -1,8 +1,8 @@
 import { RootStateTypes } from './types'
 const state: RootStateTypes = {
   validcode: {
-    'images': ''
-  },
+    images: ''
+  }
 }
 
 export default state

@@ -1,4 +1,3 @@
 export interface RootStateTypes {
-    validcode: any,
-  }
-  
+  validcode: any
+}

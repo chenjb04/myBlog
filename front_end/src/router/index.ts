@@ -1,24 +1,27 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import Login from "../views/login.vue";
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Login from '../views/login.vue'
+import Register from '../views/register.vue'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const routes = [
   {
-    path: "/login",
-    name: "login",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    path: '/login',
+    name: 'login',
     component: Login
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: Register
   }
-];
+]
 
 const router = new VueRouter({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
   routes
-});
+})
 
-export default router;
+export default router
