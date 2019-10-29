@@ -382,3 +382,35 @@ INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 16:00:51] "GET /api/user/image_
 INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 16:00:58] "GET /api/user/image_code?image_code_id=25cd4340-eb9d-4ed3-a7e8-0f3f5aa680ef&_k=1572336058411 HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 16:01:11] "GET /api/user/image_code?image_code_id=de301be8-0211-42ce-bf08-450213c8b7d0&_k=1572336071902 HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 16:01:46] "GET /api/user/image_code?image_code_id=74dea3e6-d942-4cee-808c-14d25e7cdafc&_k=1572336106835 HTTP/1.1" 200 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat

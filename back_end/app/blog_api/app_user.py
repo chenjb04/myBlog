@@ -4,7 +4,7 @@ import base64
 
 from app import redis_store
 from constants import IMAGE_CODE_REDIS_EXPIRES
-
+from app.models import User
 
 app = Blueprint(__name__ + 'app', __name__)
 
@@ -32,7 +32,31 @@ def get_image_code():
     return jsonify({'status': 'success', 'msg': '获取图片验证码成功', 'data': base64_data})
 
 
-@app.route('/api/user/index', methods=['GET'])
-def index():
-    current_app.logger.debug("eeeeeeeeee")
-    return jsonify('hello world')
+@app.route('/api/user/register', methods=['POST'])
+def register():
+    """
+    注册
+    1.获取注册参数
+    2.判断参数是否有值
+    3.判断用户名是否重复
+    4.判断邮箱是否重复
+    5.判断两个密码是否一致
+    6.从redis取邮箱验证码
+    7.判断两个验证码是否一致
+    :return:
+    """
+    username = request.json.get('username')
+    email = request.json.get('email')
+    password = request.json.get('password')
+    repeat_password = request.json.get('repeat_password')
+    sms_code = request.json.get('sms_code')
+    if not all([username, email, password, repeat_password, sms_code]):
+        return jsonify({'status': 'fail', 'msg': '参数错误'})
+    user = User.query.filter_by(username=username).first()
+    if user:
+        return jsonify({'status': 'fail', 'msg': '用户名已存在'})
+    email = User.query.filter_by(email=email).first()
+    if email:
+        return jsonify({'status': 'fail', 'msg': '邮箱已存在'})
+    if password != repeat_password:
+        return jsonify({'status': 'fail', 'msg': '两次密码不一致'})
