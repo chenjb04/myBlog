@@ -1,5 +1,6 @@
 from flask import Blueprint, jsonify, current_app, request, abort, make_response
 from utils.captcha.captcha import captcha
+import base64
 
 from app import redis_store
 from constants import IMAGE_CODE_REDIS_EXPIRES
@@ -15,7 +16,6 @@ def get_image_code():
     :return:
     """
     image_code_id = request.args.get('image_code_id', None)
-    print(image_code_id)
     if not image_code_id:
         return abort(403)
     name, text, image = captcha.generate_captcha()
@@ -24,9 +24,12 @@ def get_image_code():
     except Exception as e:
         current_app.logger.debug(e)
         return jsonify({'status': 'fail', 'msg': '存储验证码失败', 'error': str(e)})
-    response = make_response(image)
-    response.headers['Content-Type'] = 'image/jpg'
-    return response
+    # response = make_response(image)
+    # response.headers['Content-Type'] = 'image/jpg'
+    # 二进制图片转换为base64编码
+    base64_data = base64.b64encode(image)
+    base64_data = 'data:image/bmp;base64,' + base64_data.decode()
+    return jsonify({'status': 'success', 'msg': '获取图片验证码成功', 'data': base64_data})
 
 
 @app.route('/api/user/index', methods=['GET'])

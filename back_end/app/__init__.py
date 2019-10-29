@@ -21,13 +21,13 @@ redis_store = None
 
 def create_app(config_name):
     """工厂方法创建app"""
-    # 设置日志
-    setup_log(config_name)
     app = Flask(__name__)
     # 初始化数据库
     db.init_app(app)
     # 加载配置
     app.config.from_object(config[config_name])
+    # 设置日志
+    setup_log(config_name)
     # 初始化redis连接
     global redis_store
     redis_store = redis.StrictRedis(host=config[config_name].REDIS_HOST,

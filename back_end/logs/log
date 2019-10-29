@@ -148,3 +148,237 @@ INFO _internal.py:122  * Debugger PIN: 249-222-279
 INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\__init__.py', reloading
 INFO _internal.py:122  * Restarting with stat
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:02:41] "GET /api/user/image_code?image_code_id=8ea7ddc2-1fc7-44ea-97b2-bf8c356fe1bb&_k=1572318160231 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:02:48] "GET /api/user/image_code?image_code_id=956e26f4-a852-4d79-8a9c-dbeb7d6c0168&_k=1572318168673 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:02:54] "GET /api/user/image_code?image_code_id=3b345664-6219-4b44-9300-1810a249bc6f&_k=1572318174626 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:02:56] "GET /api/user/image_code?image_code_id=7a3a642d-8bd5-4f39-b09e-3ba8c039e7fe&_k=1572318176039 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:02:59] "GET /api/user/image_code?image_code_id=16daf1d1-db55-4bc6-9087-55a4556e5060&_k=1572318179683 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:03:00] "GET /api/user/image_code?image_code_id=2436b1d3-a8e0-4fb3-85f1-0fafba92fa70&_k=1572318180868 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:03:06] "GET /api/user/image_code?image_code_id=c8906a0b-1dd7-4337-92ad-16d17f39e583&_k=1572318186368 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:03:12] "GET /api/user/image_code?image_code_id=a75b9aa8-fb0c-479b-9854-8d58951dcb5a&_k=1572318192645 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:04:19] "GET /api/user/image_code?image_code_id=c60ffa68-9535-46e5-ad04-9d4c8e8daf19&_k=1572318259313 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:07:08] "GET /api/user/image_code HTTP/1.1" 403 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:07:08] "GET /favicon.ico HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:07:29] "GET /api/user/image_code?imgecode_id=12 HTTP/1.1" 403 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:07:53] "GET /api/user/image_code?image_code_id=12 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:07:57] "GET /api/user/image_code?image_code_id=12 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:08:01] "GET /api/user/image_code?image_code_id=12 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:09:20] "GET /api/user/image_code?image_code_id=795ea324-4c5b-4d60-9aad-93dd6e4f8fb3&_k=1572318560171 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:09:37] "GET /api/user/image_code?image_code_id=8a70a8c2-13cb-473f-b608-78d9706afd16&_k=1572318577117 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:10:07] "GET /api/user/image_code?image_code_id=99bef884-6e23-4734-99a3-71faaf2df20b&_k=1572318607616 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:10:17] "GET /api/user/image_code?image_code_id=f813b056-2121-4b43-b0c2-f7acf4d7ca1d&_k=1572318617817 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:10:24] "GET /api/user/image_code?image_code_id=8d33cf50-0a38-462f-851e-cd0887a8be83&_k=1572318624155 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:10:32] "GET /api/user/image_code?image_code_id=b74a2d5e-8df6-4c8a-94b1-c1a05f0399e5&_k=1572318632160 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:10:40] "GET /api/user/image_code?image_code_id=1cc5273b-e07b-4f6a-897c-aee8e36f217f&_k=1572318640447 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:10:42] "GET /api/user/image_code?image_code_id=00a8fe0e-cab8-4438-9c5a-99f187cce430&_k=1572318642610 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:10:44] "GET /api/user/image_code?image_code_id=8a74f896-45a6-4c25-b79f-e51e096689d6&_k=1572318644830 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:10:59] "GET /api/user/image_code?image_code_id=22829a24-5158-42da-89e3-6ffd619d0bc0&_k=1572318659433 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:11:01] "GET /api/user/image_code?image_code_id=d720f2d1-cff5-4a3a-80f2-4b8947c6e639&_k=1572318661873 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:11:03] "GET /api/user/image_code?image_code_id=509e42c3-ad85-49e0-a3dd-90d5f5567cf2&_k=1572318663502 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:11:09] "GET /api/user/image_code?image_code_id=8fe02900-8677-404a-9a36-72ec28ec0f5b&_k=1572318669535 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:11:17] "GET /api/user/image_code?image_code_id=a8ed9c4f-d5a2-40db-920d-444ac60bed33&_k=1572318677402 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:11:28] "GET /api/user/image_code?image_code_id=e7ee9f20-9ea3-4eb4-b5a7-9afeb164c1fe&_k=1572318687908 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:11:30] "GET /api/user/image_code?image_code_id=fdf99687-4b67-4a41-9e35-5b38f366305f&_k=1572318690288 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:11:36] "GET /api/user/image_code?image_code_id=2b0fbab9-bd1a-4f33-9211-cf6bb310de5f&_k=1572318696329 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:11:38] "GET /api/user/image_code?image_code_id=f98090fb-0922-4419-8f73-cd0737d70787&_k=1572318698299 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:11:50] "GET /api/user/image_code?image_code_id=9b3ecbdf-b618-42f3-a4b9-470f24766599&_k=1572318710588 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:12:06] "GET /api/user/image_code?image_code_id=efe65adc-e862-45a0-86ce-83a8563f832c&_k=1572318725125 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:12:06] "GET /api/user/image_code?image_code_id=27331c1d-e101-431b-9ce6-0fb8c987182e&_k=1572318726123 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:12:07] "GET /api/user/image_code?image_code_id=e048ff93-5e79-4efb-8c40-15f1c1c33fe8&_k=1572318727084 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:12:09] "GET /api/user/image_code?image_code_id=23087dae-66cb-479c-8840-641c1ea87eb5&_k=1572318729862 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:12:10] "GET /api/user/image_code?image_code_id=2520c57b-2442-4996-8450-b7839fd66142&_k=1572318730659 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:12:14] "GET /api/user/image_code?image_code_id=4be74805-ac8c-4be8-9a79-365fd0fa7864&_k=1572318734726 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:12:17] "GET /api/user/image_code?image_code_id=5ee5d3ed-3a0a-4e23-8679-45e1557f9ea8&_k=1572318737080 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:12:49] "GET /api/user/image_code?image_code_id=a90adfad-c306-45b3-bcd9-b2720d08b503&_k=1572318768824 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:12:53] "GET /api/user/image_code?image_code_id=4f3d099b-f50c-4da2-8ab8-2c6edd18f566&_k=1572318773167 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:13:17] "GET /api/user/image_code?image_code_id=1ebe8635-2bc1-4154-a590-e55c2d2843e0&_k=1572318797012 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:13:21] "GET /api/user/image_code?image_code_id=387d6a5b-0884-4377-b9b7-03a82994cdf3&_k=1572318801034 HTTP/1.1" 200 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:18:54] "GET /api/user/image_code?image_code_id=12 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:18:54] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:18:54] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:18:54] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:18:54] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:18:54] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:18:54] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:19:26] "GET /api/user/image_code?image_code_id=12 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:19:27] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:19:27] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:19:27] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:19:27] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:19:27] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:19:27] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:20:22] "GET /api/user/image_code?image_code_id=12 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:20:22] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:20:23] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:20:23] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:20:23] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:20:23] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:20:23] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:22:26] "GET /api/user/image_code?image_code_id=12 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:22:26] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:22:26] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:22:26] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:22:26] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:22:26] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:22:27] "GET /api/user/image_code?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:24:29] "GET /api/user/image_code?image_code_id=12 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:25:13] "GET /api/user/image_code?image_code_id=2e539cc0-d77a-403c-8261-807229e4cf83&_k=1572319513854 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:25:19] "GET /api/user/image_code?image_code_id=f221c320-eab4-4e38-b26c-feca3911e14e&_k=1572319518963 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:31:50] "GET /api/user/image_code?image_code_id=f63dbfe9-b939-4a58-ab61-3b0562bfac1c&_k=1572319910346 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:32:10] "GET /api/user/image_code?image_code_id=dc8f68b0-f54d-4491-8bfe-816bf4dbfa9b&_k=1572319930555 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:32:37] "GET /api/user/image_code?image_code_id=050752a8-67c4-4ff7-9f15-6c74aefeb1b6&_k=1572319956998 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:32:40] "GET /api/user/image_code?image_code_id=dc314017-0133-47c2-aec0-4370b0f32438&_k=1572319960293 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:32:41] "GET /api/user/image_code?image_code_id=13d9727b-0b2b-4422-a12b-01844b003c16&_k=1572319961761 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:32:44] "GET /api/user/image_code?image_code_id=1c8ff431-c92b-40ff-9167-875b5b41e58e&_k=1572319964408 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:33:01] "GET /api/user/image_code?image_code_id=2b3d98f5-5320-4fb5-90db-b105ead9f751&_k=1572319981693 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:33:06] "GET /api/user/image_code?image_code_id=0b152ea7-c35e-4480-9277-31066cb7fb56&_k=1572319986703 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:33:12] "GET /api/user/image_code?image_code_id=554a8ce7-f1bf-4900-b45d-732070f4f119&_k=1572319992527 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:33:16] "GET /api/user/image_code?image_code_id=8ea38597-a317-4c7f-a9da-d577d029842f&_k=1572319995775 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:33:18] "GET /api/user/image_code?image_code_id=da5f7298-08de-4ede-8a03-c8d1325b4725&_k=1572319997834 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:33:19] "GET /api/user/image_code?image_code_id=2be7d68b-0b02-4bdb-9eb3-68031a271986&_k=1572319999121 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:33:28] "GET /api/user/image_code?image_code_id=9aad10bf-aea8-4569-8b64-1c3fd5504797&_k=1572320008493 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:34:01] "GET /api/user/image_code?image_code_id=439d1ce2-1b88-4075-b2ee-8851fbb651a4&_k=1572320041900 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:34:14] "GET /api/user/image_code?image_code_id=a337cbb2-dd91-4667-aac2-eb2087a15577&_k=1572320054426 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:34:18] "GET /api/user/image_code?image_code_id=0c93a58e-1d5a-4351-a998-ea922ab2fc68&_k=1572320058275 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:34:21] "GET /api/user/image_code?image_code_id=55988099-c189-408b-9f34-b8f0e29756e6&_k=1572320061717 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:34:29] "GET /api/user/image_code?image_code_id=7a690ebc-450f-40fb-8a4f-98adffa5ce9d&_k=1572320069563 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:36:14] "GET /api/user/image_code?image_code_id=f5503bea-4889-40ed-bdde-415d9cb5593b&_k=1572320174708 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:37:33] "GET /api/user/image_code?image_code_id=16482b0d-43ab-4cfa-91a2-6da953f1a637&_k=1572320253429 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:37:37] "GET /api/user/image_code?image_code_id=08a9c739-87d0-4b13-bc55-a661b8e344a1&_k=1572320257051 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:38:00] "GET /api/user/image_code?image_code_id=eff95432-3605-4188-a98b-481af50aa79c&_k=1572320279950 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:38:04] "GET /api/user/image_code?image_code_id=b42f1bfc-c789-49bc-81a2-ee08e26e6067&_k=1572320284599 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:38:07] "GET /api/user/image_code?image_code_id=8abdb39d-192e-4e13-96eb-c48f2bc5387b&_k=1572320287108 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:38:09] "GET /api/user/image_code?image_code_id=298fd7dc-a0a0-4899-bbd3-befe82be14ab&_k=1572320289099 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:38:11] "GET /api/user/image_code?image_code_id=253c3580-4ef6-4b09-9378-c5092342785a&_k=1572320291784 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:38:15] "GET /api/user/image_code?image_code_id=ad09d555-acae-4ba9-ba4a-26f5c7c7cab3&_k=1572320295632 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:38:24] "GET /api/user/image_code?image_code_id=9ec0f03b-68ed-4ec3-9000-338b1882654f&_k=1572320303990 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 11:38:25] "GET /api/user/image_code?image_code_id=aa533ed4-d17b-45e1-8083-a4fe8c739b07&_k=1572320305558 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 13:57:00] "GET /api/user/image_code?image_code_id=ea845fa6-f47d-41d1-8d85-07854a9317cc&_k=1572328620122 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 13:57:40] "GET /api/user/image_code?image_code_id=977fd005-91ad-4c87-bb39-7a96a35725c9&_k=1572328660163 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 13:57:45] "GET /api/user/image_code?image_code_id=be90332b-5297-449c-8942-506abbf3ed5f&_k=1572328665418 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 13:58:01] "GET /api/user/image_code?image_code_id=c6797c7e-75c3-46b9-bb8b-53eb71af3996&_k=1572328681098 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 13:58:14] "GET /api/user/image_code?image_code_id=42b5c959-fdb7-42e8-bbca-78afea88fd89&_k=1572328694282 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 14:04:46] "GET /api/user/image_code?image_code_id=ef751154-2dd9-4d6c-81f9-b69715d8bfac&_k=1572329086252 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 14:05:55] "GET /api/user/image_code?image_code_id=e947a68d-9b4c-451a-a343-38e8f4e5c664&_k=1572329154997 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 14:06:00] "GET /api/user/image_code?image_code_id=0be90c67-e63d-4e0e-aaa0-553452d7a4ba&_k=1572329160459 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 14:07:35] "GET /api/user/image_code?image_code_id=fb34c513-d369-4b44-a4f9-56bbefae74f5&_k=1572329255703 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 14:07:55] "GET /api/user/image_code?image_code_id=0271e4a5-e8c1-4aeb-9599-0490c9063ded&_k=1572329275077 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 14:07:57] "GET /api/user/image_code?image_code_id=9a76c26b-0daf-456f-a44b-6b8451a207b6&_k=1572329277929 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 14:08:33] "GET /api/user/image_code?image_code_id=d04af20b-f78d-4ed0-aeaa-8364e92973cc&_k=1572329312820 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 14:09:02] "GET /api/user/image_code?image_code_id=9dcfd258-8376-44d1-9dd3-2e5aa3dcdb3e&_k=1572329341917 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 14:09:23] "GET /api/user/image_code?image_code_id=8b6899ea-c5e9-4f72-944d-a5d451c8fc4d&_k=1572329362979 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 14:10:07] "GET /api/user/image_code?image_code_id=49b787db-fca3-4df7-af6f-c25fdc2f1e66&_k=1572329407745 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 15:20:19] "GET /api/user/image_code?image_code_id=3dbc7dd2-fc6e-4880-8132-97331152271f&_k=1572333619643 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 15:20:23] "GET /api/user/image_code?image_code_id=9b73e74a-6727-47e0-833a-11d250453edb&_k=1572333623379 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 15:20:44] "GET /api/user/image_code?image_code_id=fe736fdf-82c5-4539-acfe-d8783961647e&_k=1572333644782 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 15:20:54] "GET /api/user/image_code?image_code_id=312c424f-d471-449b-950b-9988cc4a51bd&_k=1572333654046 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 15:21:01] "GET /api/user/image_code?image_code_id=71a56636-a811-4b5a-8458-b2970e60feae&_k=1572333660934 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 15:21:15] "GET /api/user/image_code?image_code_id=a80597c9-9031-41bf-8d71-dd5da33b7931&_k=1572333675268 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 15:22:47] "GET /api/user/image_code?image_code_id=e107d4d7-2c56-40c7-ab42-3b8750422ab9&_k=1572333767150 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 15:23:00] "GET /api/user/image_code?image_code_id=b5e67357-1068-4375-b259-a8e2105e1270&_k=1572333780134 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 15:23:08] "GET /api/user/image_code?image_code_id=18faa336-1663-4673-ba02-3cc46aac99a6&_k=1572333788326 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 15:23:36] "GET /api/user/image_code?image_code_id=d67cd544-11ab-4c6c-90e6-f93d2e5fd75e&_k=1572333816021 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 15:32:22] "GET /api/user/image_code?image_code_id=e0f0fcf3-f814-4fe0-bf90-acf1e4c9d052&_k=1572334341993 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 15:32:25] "GET /api/user/image_code?image_code_id=0b71afe7-8161-439b-8477-d9d475a469ad&_k=1572334345096 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 15:32:25] "GET /api/user/image_code?image_code_id=d4f8d858-a669-4120-afe8-836da0fef803&_k=1572334345704 HTTP/1.1" 200 -
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\config.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\__init__.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'C:\\Python37\\lib\\site-packages\\flask_sqlalchemy\\__init__.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 249-222-279
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 16:00:07] "GET /api/user/image_code?image_code_id=befd2c75-2b85-41e8-9380-096ee5b3315c&_k=1572336007517 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 16:00:16] "GET /api/user/image_code?image_code_id=bddfd5f0-3aa3-458f-9f2e-5c75327d1d90&_k=1572336016929 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 16:00:21] "GET /api/user/image_code?image_code_id=7033d67a-9d5e-47e1-9937-3236b2cced94&_k=1572336020943 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 16:00:37] "GET /api/user/image_code?image_code_id=61202cb8-74f6-4283-9190-f4323da3baca&_k=1572336037379 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 16:00:42] "GET /api/user/image_code?image_code_id=5d811561-5736-44a5-8bed-bd12fda65b9a&_k=1572336042935 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 16:00:45] "GET /api/user/image_code?image_code_id=682dfe04-1935-43af-969b-3c3a5d9fe206&_k=1572336045049 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 16:00:51] "GET /api/user/image_code?image_code_id=3b282b6c-1918-4064-b5ae-67305501f584&_k=1572336050713 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 16:00:58] "GET /api/user/image_code?image_code_id=25cd4340-eb9d-4ed3-a7e8-0f3f5aa680ef&_k=1572336058411 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 16:01:11] "GET /api/user/image_code?image_code_id=de301be8-0211-42ce-bf08-450213c8b7d0&_k=1572336071902 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [29/Oct/2019 16:01:46] "GET /api/user/image_code?image_code_id=74dea3e6-d942-4cee-808c-14d25e7cdafc&_k=1572336106835 HTTP/1.1" 200 -

@@ -44,7 +44,7 @@ class Config(object):
         conf.get('MYSQL').get('mysql_host'),
         conf.get('MYSQL').get('mysql_port'),
         conf.get('MYSQL').get('mysql_db'))
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
     # 自动commit
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     # redis 配置
