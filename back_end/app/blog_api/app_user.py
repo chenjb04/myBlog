@@ -1,10 +1,12 @@
-from flask import Blueprint, jsonify, current_app, request, abort, make_response
+from flask import Blueprint, jsonify, current_app, request, abort
 from utils.captcha.captcha import captcha
 import base64
 
-from app import redis_store
+from app import redis_store, mail
 from constants import IMAGE_CODE_REDIS_EXPIRES
 from app.models import User
+from flask_mail import Message
+from utils.celery_task.tasks import send_mail
 
 app = Blueprint(__name__ + 'app', __name__)
 
@@ -60,3 +62,11 @@ def register():
         return jsonify({'status': 'fail', 'msg': '邮箱已存在'})
     if password != repeat_password:
         return jsonify({'status': 'fail', 'msg': '两次密码不一致'})
+
+
+@app.route('/api/user/send_mail', methods=['GET'])
+def send_mails():
+    send_mail.delay(subject="论坛邮箱验证码",  recipients=['chenjb04@163.com'], body='5555')
+    # msg = Message('论坛邮箱验证码python', recipients=['chenjb04@163.com'], body='中国1')
+    # mail.send(msg)
+    return 'hello'

@@ -60,6 +60,16 @@ class Config(object):
         host=REDIS_HOST, port=REDIS_PORT, password=REDIS_PASSWORD)
     # 设置日志等级
     LOG_LEVEL = logging.DEBUG
+    # celery配置
+    CELERY_RESULT_BACKEND = conf.get('CELERY').get('celery_result_backend')
+    CELERY_BROKER_URL = conf.get('CELERY').get('celery_broker_url')
+    # 邮箱配置
+    MAIL_SERVER = conf.get('MAIL').get('mail_server')
+    MAIL_PORT = conf.get('MAIL').get('mail_port')
+    MAIL_USERNAME = conf.get('MAIL').get('mail_username')
+    MAIL_PASSWORD = conf.get('MAIL').get('mail_password')
+    MAIL_USE_TLS = bool(conf.get('MAIL').get('mail_use_tls'))
+    MAIL_DEFAULT_SENDER = conf.get('MAIL').get('mail_default_sender')
 
 
 class DevelopmentConfig(Config):
@@ -76,3 +86,6 @@ config = {
     'development': DevelopmentConfig,
     'production': ProductionConfig,
 }
+
+if __name__ == '__main__':
+    print(Config.MAIL_USE_TLS)

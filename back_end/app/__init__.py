@@ -11,12 +11,14 @@ from flask import Flask
 from config import config
 from flask_sqlalchemy import SQLAlchemy
 import redis
+from flask_mail import Mail
 
 
 from utils.log import setup_log
 
 db = SQLAlchemy()
 redis_store = None
+mail = Mail()
 
 
 def create_app(config_name):
@@ -26,6 +28,8 @@ def create_app(config_name):
     db.init_app(app)
     # 加载配置
     app.config.from_object(config[config_name])
+    # 初始化邮箱
+    mail.init_app(app)
     # 设置日志
     setup_log(config_name)
     # 初始化redis连接
