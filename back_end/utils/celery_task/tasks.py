@@ -41,8 +41,9 @@ celery = make_celery(app)
 
 
 @celery.task
-def send_mail(subject, recipients, body):
-    message = Message(subject=subject, recipients=recipients, body=body, sender=Config.MAIL_USERNAME)
+def send_mail(subject, recipients, html):
+    message = Message(subject=subject, recipients=recipients, sender=Config.MAIL_USERNAME)
+    message.html = html
     mail.send(message)
 # 开启celery方法
 # celery -A 应用路径 （.包路径） worker -l info -P eventlet
