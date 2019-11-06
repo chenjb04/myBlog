@@ -8,6 +8,7 @@
  * @Desc:数据库模型
 """
 from datetime import datetime
+from werkzeug.security import generate_password_hash, check_password_hash
 from . import db
 
 
@@ -45,3 +46,19 @@ class User(db.Model):
             "last_login": self.last_login.strftime("%Y-%m-%d %H:%M:%S")
         }
         return resp_dict
+
+    def set_password(self, password):
+        """
+        密码加密
+        :param password: 密码
+        :return:
+        """
+        return generate_password_hash(password)
+
+    def check_password(self, password):
+        """
+        校验密码
+        :param password: 密码
+        :return:
+        """
+        return check_password_hash(self.password_hash, password)

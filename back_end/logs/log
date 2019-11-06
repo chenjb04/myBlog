@@ -1093,3 +1093,308 @@ WARNING _internal.py:122  * Debugger is active!
 INFO _internal.py:122  * Debugger PIN: 249-222-279
 INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 INFO _internal.py:122 127.0.0.1 - - [04/Nov/2019 17:11:28] "POST /api/user/send_mail HTTP/1.1" 200 -
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 09:50:19] "POST /api/user/register HTTP/1.1" 200 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 13:56:45] "POST /api/user/send_mail HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 13:59:14] "POST /api/user/register HTTP/1.1" 500 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 13:59:48] "POST /api/user/register HTTP/1.1" 500 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:00:31] "POST /api/user/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:00:42] "POST /api/user/register HTTP/1.1" 200 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:39:56] "GET / HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:39:56] "GET /favicon.ico HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:40:11] "GET /api/user/image_code?image_code_id=12 HTTP/1.1" 200 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:42:39] "POST /api/user/login HTTP/1.1" 200 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:43:13] "POST /api/user/login HTTP/1.1" 200 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:43:28] "POST /api/user/login HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:43:49] "POST /api/user/login HTTP/1.1" 200 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:44:08] "POST /api/user/login HTTP/1.1" 200 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:44:21] "POST /api/user/login HTTP/1.1" 500 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:44:53] "POST /api/user/login HTTP/1.1" 500 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:45:19] "POST /api/user/login HTTP/1.1" 500 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:45:41] "POST /api/user/login HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:46:23] "GET /api/user/image_code?image_code_id=12 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:46:42] "POST /api/user/login HTTP/1.1" 500 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:47:23] "POST /api/user/login HTTP/1.1" 500 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:50:02] "POST /api/user/login HTTP/1.1" 500 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:50:32] "POST /api/user/login HTTP/1.1" 500 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:50:57] "POST /api/user/login HTTP/1.1" 200 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\utils\\auth.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\utils\\auth.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\utils\\auth.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:55:40] "POST /api/user/login HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:55:53] "GET /api/user/image_code?image_code_id=12 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:55:57] "POST /api/user/login HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:56:10] "POST /api/user/login HTTP/1.1" 200 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 14:57:19] "POST /api/user/login HTTP/1.1" 500 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 15:00:04] "POST /api/user/login HTTP/1.1" 200 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 15:00:37] "POST /api/user/login HTTP/1.1" 500 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 15:06:42] "GET /api/user/image_code?image_code_id=12 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 15:07:06] "POST /api/user/login HTTP/1.1" 500 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 15:07:52] "POST /api/user/login HTTP/1.1" 500 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 15:09:07] "POST /api/user/login HTTP/1.1" 500 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 15:09:47] "POST /api/user/login HTTP/1.1" 500 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 15:10:05] "POST /api/user/login HTTP/1.1" 500 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 15:10:56] "POST /api/user/login HTTP/1.1" 200 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 15:12:58] "GET /api/user/image_code?image_code_id=12 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 15:13:10] "POST /api/user/login HTTP/1.1" 500 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 15:13:31] "POST /api/user/login HTTP/1.1" 200 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 15:15:03] "GET /api/user/image_code?image_code_id=12 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [06/Nov/2019 15:15:19] "POST /api/user/login HTTP/1.1" 200 -
+INFO _internal.py:122  * Detected change in 'D:\\blog\\myBlog\\back_end\\app\\blog_api\\app_user.py', reloading
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 107-935-255
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)

@@ -3,14 +3,26 @@ from utils.captcha.captcha import captcha
 import base64
 import re
 import random
+import datetime
+import json
 
-from app import redis_store, mail
+from app import redis_store, db
 from constants import IMAGE_CODE_REDIS_EXPIRES, SMS_CODE_REDIS_EXPIRES
 from app.models import User
-from flask_mail import Message
 from utils.celery_task.tasks import send_mail
+from utils.auth import Auth
 
 app = Blueprint(__name__ + 'app', __name__, template_folder='../../utils/templates/')
+
+
+class MyEncoder(json.JSONEncoder):
+    """
+    json序列化bytes类型
+    """
+    def default(self, obj):
+        if isinstance(obj, bytes):
+            return str(obj, encoding='utf-8');
+        return json.JSONEncoder.default(self, obj)
 
 
 @app.route('/api/user/image_code', methods=['GET'])
@@ -48,8 +60,11 @@ def register():
     6.发送邮箱验证码
     7.从redis取邮箱验证码
     8.判断两个验证码是否一致
+    9.删除redis验证码
+    10.注册信息存入数据库
     :return:
     """
+    ip = request.remote_addr
     username = request.json.get('username')
     email = request.json.get('email')
     password = request.json.get('password')
@@ -60,11 +75,35 @@ def register():
     user = User.query.filter_by(username=username).first()
     if user:
         return jsonify({'status': 'fail', 'msg': '用户名已存在'})
-    email = User.query.filter_by(email=email).first()
-    if email:
+    emails = User.query.filter_by(email=email).first()
+    if emails:
         return jsonify({'status': 'fail', 'msg': '邮箱已存在'})
     if password != repeat_password:
         return jsonify({'status': 'fail', 'msg': '两次密码不一致'})
+    # 从redis取邮箱验证码
+    real_sms_code = redis_store.get('SMS_' + email)
+    if not real_sms_code:
+        return jsonify({'status': 'fail', 'msg': '验证码已失效'})
+    if sms_code != real_sms_code:
+        return jsonify({'status': 'fail', 'msg': '验证码错误'})
+    # 删除邮箱验证码
+    redis_store.delete('SMS_' + email)
+    # 注册信息存入数据库
+    user = User()
+    user.username = username
+    user.email = email
+    user.password_hash = user.set_password(password)
+    user.ip = ip
+    user.create_time = datetime.datetime.now()
+    try:
+        db.session.add(user)
+        db.session.commit()
+    except Exception as e:
+        db.session.rollback()
+        current_app.logger.error(e)
+        # 数据保存错误
+        return jsonify({'status': 'fail', 'msg': "数据库保存错误"})
+    return jsonify({'status': 'success', 'msg': "注册成功"})
 
 
 @app.route('/api/user/send_mail', methods=['POST'])
@@ -93,7 +132,49 @@ def send_mails():
     random_code = "%06d" % random.randint(0, 999999)
     # 发送邮箱验证码
     content = render_template("send_sms_code.html", code=random_code)
-    send_mail.delay(subject="论坛邮箱验证码", recipients=['chenjb04@163.com'], html=content)
+    send_mail.delay(subject="论坛邮箱验证码", recipients=[email], html=content)
     # 保存邮箱验证码到redis
     redis_store.set('SMS_' + email, random_code, SMS_CODE_REDIS_EXPIRES)
     return jsonify({'status': 'success', 'msg': '发送邮箱验证码成功'})
+
+
+@app.route('/api/user/login', methods=['POST'])
+def login():
+    """
+    登录
+    1.验证用户是否存在
+    2.验证密码正确性
+
+    :return:
+    """
+    username = request.json.get('username')
+    password = request.json.get('password')
+    image_code = request.json.get('image_code')
+    image_code_id = request.json.get('image_code_id')
+    if not all([username, password, image_code, image_code_id]):
+        return jsonify({'status': 'fail', 'msg': '参数错误'})
+    # 验证用户名是否存在
+    user = User.query.filter_by(username=username).first()
+    if not user:
+        user = User.query.filter_by(email=username).first()
+        if not user:
+            return jsonify({'status': 'fail', 'msg': '用户名不存在'})
+    # 验证密码
+    if not user.check_password(password):
+        return jsonify({'status': 'fail', 'msg': '密码错误'})
+    # 验证图片验证码
+    real_image_code = redis_store.get('image_code_id_' + image_code_id)
+    if not real_image_code:
+        return jsonify({'status': 'fail', 'msg': '图片验证码已过期,请刷新重试'})
+    if image_code.upper() != real_image_code.upper():
+        return jsonify({'status': 'fail', 'msg': '图片验证码错误'})
+    # 删除图片验证码
+    redis_store.delete('image_code_id_' + image_code_id)
+    # 记录用户登录时间和ip
+    user.last_login = datetime.datetime.now()
+    user.ip = request.remote_addr
+    db.session.commit()
+    # 生成token
+    auth = Auth()
+    token = auth.encode_auth_token(user.id, user.last_login.strftime("%Y-%m-%d %H:%M:%S"))
+    return json.dumps({'status': 'success', 'msg': '登录成功', 'token': token}, cls=MyEncoder)
