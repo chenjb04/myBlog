@@ -10,7 +10,8 @@
 import jwt
 import datetime
 import time
-from flask import jsonify
+from flask import jsonify, request
+import functools
 
 from config import Config
 from app.models import User
@@ -30,7 +31,7 @@ class Auth(object):
         """
         try:
             payload = {
-                'exp': datetime.datetime.utcnow() + datetime.timedelta(days=0, seconds=10),
+                'exp': datetime.datetime.utcnow() + datetime.timedelta(days=0, seconds=3),
                 'iat': datetime.datetime.utcnow(),
                 'iss': "ken",
                 'data': {
@@ -84,34 +85,37 @@ class Auth(object):
             else:
                 return jsonify({'status': 'fail', 'msg': '密码错误'})
 
-    def identify(self, request):
+
+def login_required(func):
+    @functools.wraps(func)
+    def identify(*args, **kwargs):
         """
         用户鉴权
-        :param request:
         :return:
         """
         auth_header = request.headers.get('Authorization')
         if auth_header:
             auth_tokenarr = auth_header.split(" ")
             if not auth_tokenarr or auth_tokenarr[0] != 'JWT' or len(auth_tokenarr) != 2:
-                result = jsonify({'status': 'fail', 'msg': '请传递正确的验证头信息'})
+                return jsonify({'status': 'fail', 'msg': '请传递正确的验证头信息'})
             else:
                 auth_token = auth_tokenarr[1]
-                payload = self.decode_auth_token(auth_token)
+                payload = Auth.decode_auth_token(auth_token)
                 if not isinstance(payload, str):
-                    user = User.get(User, payload['data']['id'])
+                    user = User.query.filter_by(id=payload['data']['id']).first()
                     if user is None:
-                        result = jsonify({'status': 'fail', 'msg': '找不到改用户信息'})
+                        return jsonify({'status': 'fail', 'msg': '找不到改用户信息'})
                     else:
-                        if user.last_login == payload['data']['login_time']:
-                            result = jsonify({'status': 'success', 'msg': '请求成功', 'data': user.id})
+                        if datetime.datetime.strftime(user.last_login, "%Y-%m-%d %H:%M:%S") == payload['data']['login_time']:
+                            kwargs['current_user'] = user
                         else:
-                            result = jsonify({'status': 'fail', 'msg': 'token已更改,找不到用户信息'})
+                            return jsonify({'status': 'fail', 'msg': 'token已更改,找不到用户信息'})
                 else:
-                    result = jsonify({'status': 'fail', 'msg': '', 'data': payload})
+                    return jsonify({'status': 'fail', 'msg': '', 'data': payload})
         else:
-            result = jsonify({'status': 'fail', 'msg': '没有认证token'})
-        return result
+            return jsonify({'status': 'fail', 'msg': '没有认证token'})
+        return func(*args, **kwargs)
+    return identify
 
 
 if __name__ == '__main__':

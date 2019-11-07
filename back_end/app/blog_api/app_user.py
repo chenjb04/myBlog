@@ -10,7 +10,7 @@ from app import redis_store, db
 from constants import IMAGE_CODE_REDIS_EXPIRES, SMS_CODE_REDIS_EXPIRES
 from app.models import User
 from utils.celery_task.tasks import send_mail
-from utils.auth import Auth
+from utils.auth import Auth, login_required
 
 app = Blueprint(__name__ + 'app', __name__, template_folder='../../utils/templates/')
 
@@ -178,3 +178,10 @@ def login():
     auth = Auth()
     token = auth.encode_auth_token(user.id, user.last_login.strftime("%Y-%m-%d %H:%M:%S"))
     return json.dumps({'status': 'success', 'msg': '登录成功', 'token': token}, cls=MyEncoder)
+
+
+@app.route('/api/user/hello', methods=['GET'])
+@login_required
+def hello(current_user):
+    print(current_user.username)
+    return 'hello'
