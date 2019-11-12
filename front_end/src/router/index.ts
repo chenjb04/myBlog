@@ -2,25 +2,33 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../views/login.vue'
 import Register from '../views/register.vue'
-import Layout from '../views/layout.vue'
+import Menu from '../views/menu.vue'
+import About from '../views/about.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/login',
-    name: 'login',
-    component: Login
-  },
-  {
-    path: '/register',
-    name: 'register',
-    component: Register
-  },
-  {
     path: '/',
-    name: 'layout',
-    component: Layout
+    name: 'menu',
+    component: Menu,
+    children: [
+      {
+        path: '/about',
+        name: 'about',
+        component: About
+      },
+      {
+        path: '/login',
+        name: 'login',
+        component: Login
+      },
+      {
+        path: '/register',
+        name: 'register',
+        component: Register
+      }
+    ]
   }
 ]
 
