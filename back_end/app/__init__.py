@@ -12,7 +12,6 @@ from config import config
 from flask_sqlalchemy import SQLAlchemy
 import redis
 from flask_mail import Mail
-from flask_login import LoginManager
 
 
 from utils.log import setup_log
@@ -20,7 +19,6 @@ from utils.log import setup_log
 db = SQLAlchemy()
 redis_store = None
 mail = Mail()
-login_manager = LoginManager()
 
 
 def create_app(config_name):
@@ -40,9 +38,6 @@ def create_app(config_name):
                                     port=config[config_name].REDIS_PORT,
                                     password=config[config_name].REDIS_PASSWORD,
                                     decode_responses=True)
-    # 初始化login_manager
-    login_manager.session_protection = 'strong'
-    login_manager.init_app(app)
 
     # 注册蓝图
     from app.blog_api.app_user import app as user_app

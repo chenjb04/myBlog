@@ -180,6 +180,23 @@ def login():
     return json.dumps({'status': 'success', 'msg': '登录成功', 'token': token}, cls=MyEncoder)
 
 
+@app.route('/api/user/get_user', methods=['POST'])
+def get_user():
+    """
+    判断用户是否存在
+    :return:
+    """
+    username = request.json.get('username')
+    email = request.json.get('email')
+    user = User.query.filter_by(username=username).first()
+    if user:
+        return jsonify({'status': 'fail', 'msg': '用户名已存在'})
+    emails = User.query.filter_by(email=email).first()
+    if emails:
+        return jsonify({'status': 'fail', 'msg': '邮箱已存在'})
+    return jsonify({'status': 'success', 'msg': 'ok'})
+
+
 @app.route('/api/user/hello', methods=['GET'])
 @login_required
 def hello(current_user):
