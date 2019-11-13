@@ -47,6 +47,7 @@ class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     # 自动commit
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
+    SQLALCHEMY_POOL_SIZE = 300
     # redis 配置
     REDIS_HOST = conf.get('REDIS').get('redis_host')
     REDIS_PORT = conf.get('REDIS').get('redis_port')

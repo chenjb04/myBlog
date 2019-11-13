@@ -42,8 +42,13 @@
           placeholder="验证码"
           v-model="form.validcode"
           prefix-icon="el-icon-key"
+          style="width:53%"
         >
         </el-input>
+        <el-button type="info" plain @click="sendCode()" v-if="!isDisabled">{{
+          content
+        }}</el-button>
+        <el-button type="info" plain v-if="isDisabled">{{ content }}</el-button>
       </el-form-item>
       <el-form-item>
         <el-button
@@ -60,8 +65,11 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import { State, Action, namespace, Getter } from 'vuex-class'
+const registerStore = namespace('register')
 @Component
 export default class Register extends Vue {
+  @registerStore.State(state => state.msg) msg: any
+  @registerStore.Action('GET_USER') GET_USER: any
   form: any = {
     username: '',
     email: '',
@@ -69,15 +77,22 @@ export default class Register extends Vue {
     repeat_password: '',
     validcode: ''
   }
+  content: string = '获取邮箱验证码'
+  isDisabled: boolean = false
+  $message: any
+  count: number = 0
+  timer: any
+
+  mounted() {}
   // 表单验证
   rules: object = {
     username: {
-      message: '请输入用户名',
       trigger: 'blur',
-      required: true
+      required: true,
+      validator: this.checkUsername
     },
     email: [
-      { message: '请输入邮箱', trigger: 'blur', required: true },
+      { validator: this.checkEmail, trigger: 'blur', required: true },
       { type: 'email', message: '请输入正确的邮箱地址', trigger: 'blur' }
     ],
     password: {
@@ -91,6 +106,34 @@ export default class Register extends Vue {
       required: true
     },
     validcode: { message: '请输入邮箱验证码', trigger: 'blur', required: true }
+  }
+  // 检查用户名是否存在
+  checkUsername(rule: any, value: any, callback: any) {
+    if (value === '') {
+      callback(new Error('请输入用户名'))
+    }
+    this.GET_USER({ username: value, email: '' })
+    setTimeout(() => {
+      if (this.msg != 'ok') {
+        callback(new Error(this.msg))
+      } else {
+        callback()
+      }
+    }, 1000)
+  }
+  // 检查邮箱是否存在
+  checkEmail(rule: any, value: any, callback: any) {
+    if (value === '') {
+      callback(new Error('请输入邮箱'))
+    }
+    this.GET_USER({ username: this.form.username, email: value })
+    setTimeout(() => {
+      if (this.msg != 'ok') {
+        callback(new Error(this.msg))
+      } else {
+        callback()
+      }
+    }, 1000)
   }
   // 检查密码
   checkPasssword(rule: any, value: any, callback: any): void {
@@ -136,6 +179,31 @@ export default class Register extends Vue {
         return false
       }
     })
+  }
+  sendCode() {
+    let regEmail = /^([a-zA-Z0-9]+[_|_|.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|_|.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/
+    if (this.form.email === '') {
+      // ;(this as any).$message.error('请输入邮箱')
+      this.$message.error('请输入邮箱')
+    } else if (!regEmail.test(this.form.email)) {
+      this.$message.error('请输入正确邮箱格式')
+    } else {
+      if (!this.timer) {
+        this.count = 60
+        this.isDisabled = true
+        this.timer = setInterval(() => {
+          if (this.count > 0 && this.count <= 60) {
+            this.count--
+            this.content = this.count + 's后重新发送'
+          } else {
+            this.content = '获取邮箱验证码'
+            this.isDisabled = false
+            clearInterval(this.timer)
+            this.timer = null
+          }
+        }, 1000)
+      }
+    }
   }
 }
 </script>

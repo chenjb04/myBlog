@@ -5,13 +5,11 @@ import router from '@/router'
 import $http from '@/utils/http'
 
 const actions: ActionTree<RootStateTypes, any> = {
-  GET_VALIDCODE({ commit, state: RootStateTypes }, data: string) {
+  GET_USER({ commit, state: RootStateTypes }, data: any) {
     $http
-      .get('/api/user/image_code', data)
-      .then(({ status, msg, data }: any) => {
-        if (status == 'success') {
-          commit('SET_VAlIDCODE', data)
-        }
+      .option('/api/user/get_user', data)
+      .then((data:any) => {
+        commit('SET_USER', data)
       })
   }
 }
