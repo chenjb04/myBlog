@@ -70,6 +70,8 @@ const registerStore = namespace('register')
 export default class Register extends Vue {
   @registerStore.State(state => state.msg) msg: any
   @registerStore.Action('GET_USER') GET_USER: any
+  @registerStore.Action('SEND_CODE') SEND_CODE: any
+  @registerStore.Action('REGISTER') REGISTER: any
   form: any = {
     username: '',
     email: '',
@@ -171,10 +173,12 @@ export default class Register extends Vue {
       if (valid) {
         let form: any = {
           username: this.form.username,
+          email: this.form.email,
           password: this.form.password,
-          validcode: this.form.validcode
+          repeat_password: this.form.repeat_password,
+          sms_code: this.form.validcode
         }
-        // this.GET_USER(form)
+        this.REGISTER(form)
       } else {
         return false
       }
@@ -189,6 +193,7 @@ export default class Register extends Vue {
       this.$message.error('请输入正确邮箱格式')
     } else {
       if (!this.timer) {
+        this.SEND_CODE({ email: this.form.email })
         this.count = 60
         this.isDisabled = true
         this.timer = setInterval(() => {
