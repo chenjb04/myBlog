@@ -9,10 +9,14 @@ const actions: ActionTree<RootStateTypes, any> = {
     $http
       .get('/api/user/image_code', data)
       .then(({ status, msg, data }: any) => {
-        if (status == 'success') {
+        if (status === 'success') {
           commit('SET_VAlIDCODE', data)
         }
       })
+  },
+  LOGIN({ commit, state: RootStateTypes }, data: any) {
+    $http.option('/api/user/login', data).then((data: any ) => {
+    })
   }
 }
 

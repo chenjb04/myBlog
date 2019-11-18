@@ -36,7 +36,9 @@
         />
       </el-form-item>
       <el-form-item>
-        <el-checkbox>记住我</el-checkbox>
+        <el-checkbox v-model="form.autoLogin" :checked="form.autoLogin"
+          >7天内自动登录</el-checkbox
+        >
         <a class="login-form-forgot">忘记密码？</a>
         <el-button
           type="primary"
@@ -60,7 +62,8 @@ export default class Login extends Vue {
   form: any = {
     username: '',
     password: '',
-    validcode: ''
+    validcode: '',
+    autoLogin: true
   }
   imageCodeId: string = ''
   // 表单验证
