@@ -59,6 +59,7 @@ let loginStore = namespace('login')
 export default class Login extends Vue {
   @loginStore.State(state => state.validcode) validcode: any
   @loginStore.Action('GET_VALIDCODE') GET_VALIDCODE: any
+  @loginStore.Action('LOGIN') LOGIN: any
   form: any = {
     username: '',
     password: '',
@@ -80,8 +81,8 @@ export default class Login extends Vue {
       required: true
     }
   }
+  imageCodeId = this.generateUUID()
   mounted() {
-    this.imageCodeId = this.generateUUID()
     this.GET_VALIDCODE({ image_code_id: this.imageCodeId })
   }
   // 验证码验证
@@ -99,10 +100,10 @@ export default class Login extends Vue {
         let form: any = {
           username: this.form.username,
           password: this.form.password,
-          validcode: this.form.validcode
-          //   validcode_img: this.validcode.image
+          image_code: this.form.validcode,
+          image_code_id: this.generateUUID()
         }
-        // this.GET_USER(form)
+        this.LOGIN(form)
       } else {
         return false
       }
