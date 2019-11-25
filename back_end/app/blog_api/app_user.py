@@ -183,7 +183,7 @@ def login():
 @app.route('/api/user/get_user', methods=['POST'])
 def get_user():
     """
-    判断用户是否存在
+    注册判断用户是否存在
     :return:
     """
     username = request.json.get('username')
@@ -197,8 +197,26 @@ def get_user():
     return jsonify({'status': 'success', 'msg': 'ok'})
 
 
-@app.route('/api/user/hello', methods=['GET'])
+@app.route('/api/user/check_user', methods=['POST'])
+def check_user():
+    """
+    登录检查用户是否存在
+    :return:
+    """
+    username = request.json.get('username')
+    user = User.query.filter_by(username=username).first()
+    if not user:
+        user = User.query.filter_by(email=username).first()
+        if not user:
+            return jsonify({'status': 'fail', 'msg': '用户名不存在'})
+        else:
+            return jsonify({'status': 'success', 'msg': 'ok'})
+    return jsonify({'status': 'success', 'msg': 'ok'})
+
+
+@app.route('/api/user/get_user_info', methods=['GET'])
 @login_required
-def hello(current_user):
-    print(current_user.username)
-    return 'hello'
+def get_user_info(current_user):
+    data = {}
+    data['username'] = current_user.username
+    return jsonify({'status': 'success', 'msg': 'ok', 'data': data})

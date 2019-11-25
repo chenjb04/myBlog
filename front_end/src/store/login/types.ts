@@ -1,3 +1,5 @@
 export interface RootStateTypes {
-  validcode: any
+  validcode: any,
+  msg: string,
+  username: string
 }

@@ -9,7 +9,7 @@
     >
       <el-form-item prop="username">
         <el-input
-          placeholder="用户名/手机号/邮箱"
+          placeholder="用户名/邮箱"
           v-model="form.username"
           prefix-icon="el-icon-user"
         ></el-input>
@@ -58,6 +58,8 @@ let loginStore = namespace('login')
 @Component
 export default class Login extends Vue {
   @loginStore.State(state => state.validcode) validcode: any
+  @loginStore.State(state => state.msg) msg: any
+  @loginStore.Action('GET_USER') GET_USER: any
   @loginStore.Action('GET_VALIDCODE') GET_VALIDCODE: any
   @loginStore.Action('LOGIN') LOGIN: any
   form: any = {
@@ -66,11 +68,10 @@ export default class Login extends Vue {
     validcode: '',
     autoLogin: true
   }
-  imageCodeId: string = ''
   // 表单验证
   rules: object = {
     username: {
-      message: '请输入用户名/手机号/邮箱',
+      validator: this.checkUsername,
       trigger: 'blur',
       required: true
     },
@@ -81,9 +82,23 @@ export default class Login extends Vue {
       required: true
     }
   }
-  imageCodeId = this.generateUUID()
+  imageCodeId: any = this.generateUUID()
   mounted() {
     this.GET_VALIDCODE({ image_code_id: this.imageCodeId })
+  }
+  // 检查用户名是否存在
+  checkUsername(rule: any, value: any, callback: any) {
+    if (value === '') {
+      callback(new Error('请输入用户名/邮箱'))
+    }
+    this.GET_USER({ username: value })
+    setTimeout(() => {
+      if (this.msg !== 'ok') {
+        callback(new Error(this.msg))
+      } else {
+        callback()
+      }
+    }, 1000)
   }
   // 验证码验证
   checkValicode(rule: any, value: string, callback: any) {
@@ -101,7 +116,7 @@ export default class Login extends Vue {
           username: this.form.username,
           password: this.form.password,
           image_code: this.form.validcode,
-          image_code_id: this.generateUUID()
+          image_code_id: this.imageCodeId
         }
         this.LOGIN(form)
       } else {

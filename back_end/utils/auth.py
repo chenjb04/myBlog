@@ -31,7 +31,7 @@ class Auth(object):
         """
         try:
             payload = {
-                'exp': datetime.datetime.utcnow() + datetime.timedelta(days=0, seconds=3),
+                'exp': datetime.datetime.utcnow() + datetime.timedelta(days=0, minutes=2),
                 'iat': datetime.datetime.utcnow(),
                 'iss': "ken",
                 'data': {
@@ -104,7 +104,7 @@ def login_required(func):
                 if not isinstance(payload, str):
                     user = User.query.filter_by(id=payload['data']['id']).first()
                     if user is None:
-                        return jsonify({'status': 'fail', 'msg': '找不到改用户信息'})
+                        return jsonify({'status': 'fail', 'msg': '找不到该用户信息'})
                     else:
                         if datetime.datetime.strftime(user.last_login, "%Y-%m-%d %H:%M:%S") == payload['data']['login_time']:
                             kwargs['current_user'] = user
@@ -120,6 +120,6 @@ def login_required(func):
 
 if __name__ == '__main__':
     auth = Auth()
-    token = auth.encode_auth_token(1, "2019/11/6 10:13:20")
-    print(str(token))
-    # print(auth.decode_auth_token('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NzMwMDY0NDEsImlhdCI6MTU3MzAwNjQzMSwiaXNzIjoia2VuIiwiZGF0YSI6eyJpZCI6MSwibG9naW5fdGltZSI6IjIwMTkvMTEvNiAxMDoxMzoyMCJ9fQ.t4Cen4f9-QOU6fuKsm-CyYo7SAkZCxviRMyDWENi2J8'))
+    # token = auth.encode_auth_token(1, "2019/11/6 10:13:20")
+    # print(str(token))
+    print(auth.decode_auth_token('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NzQzNTAwODQsImlhdCI6MTU3NDM0OTk2NCwiaXNzIjoia2VuIiwiZGF0YSI6eyJpZCI6MiwibG9naW5fdGltZSI6IjIwMTktMTEtMjEgMTU6MjY6MDQifX0.U67Uy8poH_7TnGAKoIfAWMM4QIwLLNI-zhA1glfdYvY'))

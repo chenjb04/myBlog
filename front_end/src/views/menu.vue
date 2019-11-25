@@ -12,8 +12,10 @@
         @click="handleMenuClick(item, index, null)"
         :key="index"
         :class="{ active: index == menuIndex }"
-        >{{ item.text }}</el-menu-item
-      >
+        ><span v-if="index < 2">{{ item.text }}</span>
+        <span v-else-if="index > 2 && username !== ''">{{ username }}</span>
+        <span v-else>{{ item.text }}</span>
+      </el-menu-item>
     </el-menu>
     <router-view></router-view>
   </div>
@@ -21,8 +23,10 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import { State, Action, namespace, Getter } from 'vuex-class'
+let menuStore = namespace('login')
 @Component
 export default class Menu extends Vue {
+  @menuStore.State(state => state.username) username: any
   public menuIndex: any = 0
   menus: Array<any> = [
     {
