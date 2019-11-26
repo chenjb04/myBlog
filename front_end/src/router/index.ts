@@ -16,7 +16,10 @@ const routes = [
       {
         path: '/about',
         name: 'about',
-        component: About
+        component: About,
+        meta: {
+          requireAuth: true
+        }
       },
       {
         path: '/login',
@@ -31,6 +34,10 @@ const routes = [
     ]
   }
 ]
+const originalPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push(location:any) {
+  return originalPush.call(this, location).catch((err: any) => err)
+}
 
 const router = new VueRouter({
   mode: 'history',

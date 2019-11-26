@@ -12,9 +12,14 @@
         @click="handleMenuClick(item, index, null)"
         :key="index"
         :class="{ active: index == menuIndex }"
-        ><span v-if="index < 2">{{ item.text }}</span>
-        <span v-else-if="index > 2 && username !== ''">{{ username }}</span>
-        <span v-else>{{ item.text }}</span>
+        ><span>{{ item.text }}</span>
+      </el-menu-item>
+      <el-menu-item style="float:right">
+        <span v-if="username === ''"
+          ><el-button @click="login">登录</el-button>
+          <el-button @click="register">注册</el-button></span
+        >
+        <span v-if="username !== ''">{{ username }}</span>
       </el-menu-item>
     </el-menu>
     <router-view></router-view>
@@ -23,10 +28,12 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import { State, Action, namespace, Getter } from 'vuex-class'
-let menuStore = namespace('login')
+let menuStore = namespace('menu')
 @Component
 export default class Menu extends Vue {
-  @menuStore.State(state => state.username) username: any
+  // @menuStore.State(state => state.username) username: any
+  @menuStore.Action('GET_USER_INFO') GET_USER_INFO: any
+  username: string = ''
   public menuIndex: any = 0
   menus: Array<any> = [
     {
@@ -38,22 +45,39 @@ export default class Menu extends Vue {
       level: 1,
       text: '关于',
       path: '/about'
-    },
-    {
-      level: 1,
-      text: '登录',
-      path: '/login'
-    },
-    {
-      level: 1,
-      text: '注册',
-      path: '/register'
     }
+    // {
+    //   level: 1,
+    //   text: '登录',
+    //   path: '/login',
+    //   menushow: true
+    // },
+    // {
+    //   level: 1,
+    //   text: '注册',
+    //   path: '/register',
+    //   menushow: true
+    // }
   ]
+  mounted() {
+    if (localStorage.getItem('token')) {
+      this.GET_USER_INFO()
+    }
+  }
   handleMenuClick(item: any, index: number, i: any) {
     this.menuIndex = index
     this.$router.push({
       path: item.path
+    })
+  }
+  login() {
+    this.$router.push({
+      path: '/login'
+    })
+  }
+  register() {
+    this.$router.push({
+      path: '/register'
     })
   }
   // i ? (this.subI = i) : ''

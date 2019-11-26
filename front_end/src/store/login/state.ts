@@ -4,7 +4,7 @@ const state: RootStateTypes = {
     images: ''
   },
   msg: '', 
-  username: ''
+  username: localStorage.getItem('username') ? localStorage.getItem('username') : ''
 }
 
 export default state

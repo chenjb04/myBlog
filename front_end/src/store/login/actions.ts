@@ -24,6 +24,7 @@ const actions: ActionTree<RootStateTypes, any> = {
     $http.get('/api/user/get_user_info', data).then(({ status, msg, data }: any) => {
       if (status === 'success'){
         commit('SET_USER_INFO', data)
+        localStorage.setItem('username', data.username)
       }
     })
   },
