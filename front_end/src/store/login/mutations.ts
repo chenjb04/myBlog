@@ -8,9 +8,6 @@ const mutations: MutationTree<RootStateTypes> = {
   SET_USER(state: RootStateTypes, data: any) {
     state.msg = data.msg
 },
-  SET_USER_INFO(state: RootStateTypes, data: any) {
-  state.username = data.username
-},
 }
 
 export default mutations

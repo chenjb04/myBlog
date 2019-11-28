@@ -1,6 +1,7 @@
 import axios, { AxiosResponse, AxiosRequestConfig } from 'axios'
 import { Message } from 'element-ui'
 import { stringify } from 'qs'
+import router from '@/router'
 
 const $http = axios.create({
   timeout: 10000 // 超时时间
@@ -29,6 +30,10 @@ $http.interceptors.response.use(
       switch (err.response.status) {
         case 401:
           errMsg = '登录状态失效，请重新登录'
+          router.replace({
+            path: '/login', 
+            query: {redirect: router.currentRoute.fullPath}
+          })
           break
         case 403:
           errMsg = '拒绝访问'

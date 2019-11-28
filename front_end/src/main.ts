@@ -12,6 +12,9 @@ Vue.use(ElementUI)
 Vue.use(Vuex)
 
 router.beforeEach((to, from, next) => {
+  if (localStorage.getItem('token')) {
+    store.dispatch('menu/GET_USER_INFO')
+  }
   if (to.meta.requireAuth) {
     if (localStorage.getItem('token')) {
       next()
@@ -23,6 +26,17 @@ router.beforeEach((to, from, next) => {
     }
   } else {
     next()
+  }
+  if (
+    to.path.split('/')[to.path.split('/').length - 1] === 'login' ||
+    to.path.split('/')[to.path.split('/').length - 1] === 'register'
+  ) {
+    if (localStorage.getItem('token')) {
+      router.push({
+        path: '/'
+      })
+      location.reload()
+    }
   }
 })
 new Vue({

@@ -20,20 +20,13 @@ const actions: ActionTree<RootStateTypes, any> = {
       commit('SET_USER', data)
     })
   },
-  GET_USER_INFO({ commit, state: RootStateTypes }, data: any) {
-    $http.get('/api/user/get_user_info', data).then(({ status, msg, data }: any) => {
-      if (status === 'success'){
-        commit('SET_USER_INFO', data)
-        localStorage.setItem('username', data.username)
-      }
-    })
-  },
-  LOGIN({ commit,dispatch, state: RootStateTypes }, data: any) {
+  LOGIN({ commit, dispatch, state: RootStateTypes }, data: any) {
     $http.option('/api/user/login', data).then((data: any) => {
       if (data.status === 'success') {
         localStorage.setItem('token', data.token)
+        // 1 已登录 0 未登录
+        localStorage.setItem('_a', '1')
         router.go(-1)
-        dispatch('GET_USER_INFO')
       } else {
         Message({
           message: data.msg,

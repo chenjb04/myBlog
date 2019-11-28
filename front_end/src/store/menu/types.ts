@@ -1,4 +1,6 @@
 export interface RootStateTypes {
-    username: string
+    username: string, 
+    isLogin:number,
+    loading:boolean
     }
     

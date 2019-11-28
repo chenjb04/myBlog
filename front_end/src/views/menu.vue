@@ -14,13 +14,18 @@
         :class="{ active: index == menuIndex }"
         ><span>{{ item.text }}</span>
       </el-menu-item>
-      <el-menu-item style="float:right">
-        <span v-if="username === ''"
+      <el-menu-item style="float:right" v-show="isLogin === 0">
+        <span
           ><el-button @click="login">登录</el-button>
           <el-button @click="register">注册</el-button></span
         >
-        <span v-if="username !== ''">{{ username }}</span>
       </el-menu-item>
+      <el-submenu style="float:right" v-show="isLogin === 1" index="3">
+        <template slot="title">{{ username }}</template>
+        <el-menu-item index="3-1"
+          ><span @click="logout()">退出登录</span></el-menu-item
+        >
+      </el-submenu>
     </el-menu>
     <router-view></router-view>
   </div>
@@ -31,10 +36,13 @@ import { State, Action, namespace, Getter } from 'vuex-class'
 let menuStore = namespace('menu')
 @Component
 export default class Menu extends Vue {
-  // @menuStore.State(state => state.username) username: any
+  @menuStore.State(state => state.isLogin) isLogin: any
+  @menuStore.State(state => state.loading) loading: any
+  @menuStore.State(state => state.username) username: any
   @menuStore.Action('GET_USER_INFO') GET_USER_INFO: any
-  username: string = ''
+  @menuStore.Mutation('SET_USER_INFO') SET_USER_INFO: any
   public menuIndex: any = 0
+  public flgI: any = -1
   menus: Array<any> = [
     {
       level: 1,
@@ -59,16 +67,13 @@ export default class Menu extends Vue {
     //   menushow: true
     // }
   ]
-  mounted() {
-    if (localStorage.getItem('token')) {
-      this.GET_USER_INFO()
-    }
-  }
   handleMenuClick(item: any, index: number, i: any) {
-    this.menuIndex = index
-    this.$router.push({
-      path: item.path
-    })
+    if (item.path) {
+      this.menuIndex = index
+      this.$router.push({
+        path: item.path
+      })
+    }
   }
   login() {
     this.$router.push({
@@ -80,6 +85,13 @@ export default class Menu extends Vue {
       path: '/register'
     })
   }
-  // i ? (this.subI = i) : ''
+  logout() {
+    localStorage.removeItem('token')
+    localStorage.setItem('_a', '0')
+    this.SET_USER_INFO({ username: '', isLogin: 0 })
+    this.$router.push({
+      path: '/'
+    })
+  }
 }
 </script>
