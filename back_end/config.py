@@ -71,6 +71,11 @@ class Config(object):
     MAIL_PASSWORD = conf.get('MAIL').get('mail_password')
     MAIL_USE_TLS = bool(conf.get('MAIL').get('mail_use_tls'))
     MAIL_DEFAULT_SENDER = conf.get('MAIL').get('mail_default_sender')
+    # 七牛云配置
+    QINIU_ACCESS_KEY = conf.get('QINIU').get('access_key')
+    QINIU_SECRET_KEY = conf.get('QINIU').get('secret_key')
+    QINIU_BUCKET_NAME = conf.get('QINIU').get('bucket_name')
+    QINIU_DOMAIN = conf.get('QINIU').get('domain')
 
 
 class DevelopmentConfig(Config):

@@ -7,10 +7,11 @@ import datetime
 import json
 
 from app import redis_store, db
-from constants import IMAGE_CODE_REDIS_EXPIRES, SMS_CODE_REDIS_EXPIRES
+from constants import IMAGE_CODE_REDIS_EXPIRES, SMS_CODE_REDIS_EXPIRES, DEFAULT_AVATAR_URL
 from app.models import User
 from utils.celery_task.tasks import send_mail
 from utils.auth import Auth, login_required
+from config import Config
 
 app = Blueprint(__name__ + 'app', __name__, template_folder='../../utils/templates/')
 
@@ -94,6 +95,7 @@ def register():
     user.email = email
     user.password_hash = user.set_password(password)
     user.ip = ip
+    user.avatar_url = DEFAULT_AVATAR_URL
     user.create_time = datetime.datetime.now()
     try:
         db.session.add(user)
@@ -219,4 +221,5 @@ def check_user():
 def get_user_info(current_user):
     data = {}
     data['username'] = current_user.username
+    data['avatar_url'] = Config.QINIU_DOMAIN + '/' + current_user.avatar_url
     return jsonify({'status': 'success', 'msg': 'ok', 'data': data})

@@ -4,6 +4,7 @@ import Login from '../views/login.vue'
 import Register from '../views/register.vue'
 import Menu from '../views/menu.vue'
 import About from '../views/about.vue'
+import userInfoMenu from '../views/userInfoMenu.vue'
 
 Vue.use(VueRouter)
 
@@ -30,6 +31,14 @@ const routes = [
         path: '/register',
         name: 'register',
         component: Register
+      },
+      {
+        path: '/userinfo',
+        name: 'userinfo',
+        component: userInfoMenu,
+        meta: {
+          requireAuth: true
+        }
       }
     ]
   }
