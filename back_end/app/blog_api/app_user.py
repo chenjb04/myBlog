@@ -12,6 +12,7 @@ from app.models import User
 from utils.celery_task.tasks import send_mail
 from utils.auth import Auth, login_required
 from config import Config
+from utils.image_qiniu_storage import storage, delete_img
 
 app = Blueprint(__name__ + 'app', __name__, template_folder='../../utils/templates/')
 
@@ -95,7 +96,7 @@ def register():
     user.email = email
     user.password_hash = user.set_password(password)
     user.ip = ip
-    user.avatar_url = DEFAULT_AVATAR_URL
+    user.avatar_url = DEFAULT_AVATAR_URL + "@" + str(user.id)
     user.create_time = datetime.datetime.now()
     try:
         db.session.add(user)
@@ -219,7 +220,36 @@ def check_user():
 @app.route('/api/user/get_user_info', methods=['GET'])
 @login_required
 def get_user_info(current_user):
+    """
+    获取用户信息
+    """
     data = {}
     data['username'] = current_user.username
-    data['avatar_url'] = Config.QINIU_DOMAIN + '/' + current_user.avatar_url
+    data['avatar_url'] = Config.QINIU_DOMAIN + '/' + current_user.avatar_url.split('@')[0]
+    print(data['avatar_url'])
     return jsonify({'status': 'success', 'msg': 'ok', 'data': data})
+
+
+@app.route('/api/user/upload_avatar', methods=['POST'])
+@login_required
+def upload_avatar(current_user):
+    """
+    头像上传
+    """
+    if current_user.avatar_url != DEFAULT_AVATAR_URL + '@' + str(current_user.id):
+        delete_img(current_user.avatar_url.split('@')[0])
+    avatar_file = request.files.get('file').read()
+    try:
+        url = storage(avatar_file)
+    except Exception as e:
+        current_app.logger.error(e)
+        return jsonify({'status': 'fail', 'msg': '上传七牛云失败'})
+    current_user.avatar_url = url + '@' + str(current_user.id)
+    try:
+        db.session.commit()
+    except Exception as e:
+        current_app.logger.error(e)
+        db.session.rollback()
+        return jsonify({'status': 'fail', 'msg': '保存数据失败'})
+    avatar_url = Config.QINIU_DOMAIN + '/' + current_user.avatar_url.split('@')[0]
+    return jsonify({'status': 'success', 'msg': '上传头像成功', 'data': avatar_url})

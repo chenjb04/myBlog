@@ -15,6 +15,15 @@ const actions: ActionTree<RootStateTypes, any> = {
           commit('SET_USER_INFO', data)
         }
       })
+  },
+  UPLOAD_AVATAR({ dispatch, state: RootStateTypes }, data: any) {
+    $http
+      .option('/api/user/upload_avatar', data)
+      .then(({ status, msg, data }: any) => {
+        if (status === 'success') {
+          dispatch("GET_USER_INFO")
+        }
+      })
   }
 }
 
