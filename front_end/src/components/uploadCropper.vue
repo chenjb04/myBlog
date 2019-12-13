@@ -7,17 +7,15 @@
       @click="openFile"
     /> -->
 
-    <a v-show="destImg === null" class="file">
-      <i class="el-icon-camera"></i>修改我的头像
+    <!-- <a v-show="destImg === null">
       <input
         ref="input"
         type="file"
         accept="image/png,image/jpeg,image/gif"
         @change="change"
         v-show="!openCrop"
-        class="file-input"
       />
-    </a>
+    </a> -->
 
     <div class="crop-container" v-show="openCrop">
       <div
@@ -280,9 +278,24 @@ export default {
         dest.height
       )
     },
+    dataURLtoFile(dataurl, filename) {
+      var arr = dataurl.split(','),
+        mime = arr[0].match(/:(.*?);/)[1],
+        bstr = atob(arr[1]),
+        n = bstr.length,
+        u8arr = new Uint8Array(n)
+      while (n--) {
+        u8arr[n] = bstr.charCodeAt(n)
+      }
+      return new File([u8arr], filename, { type: mime })
+    },
     clip: function() {
-      this.destImg = this.$refs.canvas.toDataURL()
+      this.destImg = this.dataURLtoFile(this.$refs.canvas.toDataURL())
+      let formData = new FormData()
+      formData.append('file', this.destImg)
+      this.$store.dispatch('menu/UPLOAD_AVATAR', formData)
       this.closeCrop()
+      // return this.dataURLtoFile(this.destImg)
     },
     openFile: function() {
       if (!this.openCrop) {
@@ -290,11 +303,16 @@ export default {
       }
     },
     closeCrop: function() {
+      this.destImg = ''
+      this.cropBox.height = baseWidth
+      this.cropBox.width = baseWidth
+      this.cropBox.left = 0
+      this.cropBox.top = 0
       this.openCrop = false
-      this.$refs.input.value = ''
+      // this.$refs.input.value = ''
     },
-    change: function() {
-      var file = this.$refs.input.files[0]
+    change: function(file) {
+      // var file = this.$refs.input.files[0]
       // 限制容量
       if (file && file.size <= this.limit * 1024) {
         var reader = new FileReader()
@@ -312,9 +330,9 @@ export default {
       this.image.onload = () => {
         var height = this.image.naturalHeight
         var width = this.image.naturalWidth
-        if (height / width !== this.ratio) {
-          console.log('比例不对啊:' + height / width)
-        }
+        // if (height / width !== this.ratio) {
+        //   console.log('比例不对啊:' + height / width)
+        // }
         this.draw()
       }
       this.imgSrc = url
@@ -805,30 +823,10 @@ $height: 400px;
     }
   }
 }
-
-.file {
-  // display: none;
-  // opacity: 0;
-  height: 200px;
-  width: 200px;
-  position: absolute;
-  cursor: pointer;
-  margin-left: -100px;
-  background-color: rgb(0, 0, 0, 0.8);
-  border: 1px solid#fff;
-  // padding-left: 50px;
-  padding-top: 80px;
-  color: #fff;
-  font-size: 20px;
-  text-align: center;
-}
 .file-input {
   // position: absolute;
   overflow: hidden;
-  height: 200px;
-  width: 200px;
   opacity: 0;
-  margin-top: -106px;
   cursor: pointer;
 }
 </style>

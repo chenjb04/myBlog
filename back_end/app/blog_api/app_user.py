@@ -236,14 +236,14 @@ def upload_avatar(current_user):
     """
     头像上传
     """
-    if current_user.avatar_url != DEFAULT_AVATAR_URL + '@' + str(current_user.id):
-        delete_img(current_user.avatar_url.split('@')[0])
     avatar_file = request.files.get('file').read()
     try:
         url = storage(avatar_file)
     except Exception as e:
         current_app.logger.error(e)
         return jsonify({'status': 'fail', 'msg': '上传七牛云失败'})
+    if current_user.avatar_url != DEFAULT_AVATAR_URL + '@' + str(current_user.id):
+        delete_img(current_user.avatar_url.split('@')[0])
     current_user.avatar_url = url + '@' + str(current_user.id)
     try:
         db.session.commit()
